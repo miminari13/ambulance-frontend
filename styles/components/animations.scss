@@ -1,0 +1,260 @@
+.animation_delay>li {
+  opacity: 0;
+  transform: translateY(15px);
+  -webkit-animation: eliment-animation .3s ease-in-out .33333s;
+  animation: eliment-animation .3s ease-in-out .33333s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+.animation_delay>li:nth-child(1) {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s
+}
+
+.animation_delay>li:nth-child(2) {
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s
+}
+
+.animation_delay>li:nth-child(3) {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s
+}
+
+.animation_delay>li:nth-child(4) {
+  -webkit-animation-delay: .25s;
+  animation-delay: .25s
+}
+
+.animation_delay>li:nth-child(5) {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s
+}
+
+.animation_delay>li:nth-child(6) {
+  -webkit-animation-delay: .35s;
+  animation-delay: .35s
+}
+
+.animation_delay>li:nth-child(7) {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s
+}
+
+.animation_delay>li:nth-child(8) {
+  -webkit-animation-delay: .45s;
+  animation-delay: .45s
+}
+
+.animation_delay>li:nth-child(9) {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s
+}
+
+.animation_delay>li:nth-child(10) {
+  -webkit-animation-delay: .55s;
+  animation-delay: .55s
+}
+
+.animation_delay>li:nth-child(11) {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s
+}
+
+.animation_delay>li:nth-child(12) {
+  -webkit-animation-delay: .65s;
+  animation-delay: .65s
+}
+
+.animation_delay>li:nth-child(13) {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s
+}
+
+.animation_delay>li:nth-child(14) {
+  -webkit-animation-delay: .75s;
+  animation-delay: .75s
+}
+
+@-webkit-keyframes eliment-animation {
+  to {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+@keyframes eliment-animation {
+  to {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+.lift {
+  transition: box-shadow .25s ease, transform .25s ease
+}
+
+.lift:focus,
+.lift:hover {
+  box-shadow: 0 6px 1rem rgba(25, 24, 24, 0.1), 0 0.5rem 1rem -0.75rem rgba(25, 24, 24, 0.1) !important;
+  transform: translate3d(0, -3px, 0)
+}
+
+.animate_lines {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 90vw;
+  z-index: 1
+}
+
+.animate_lines .line {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(23, 25, 28, 0.05)
+}
+
+.animate_lines .line:nth-child(1) {
+  margin-left: 22%
+}
+
+.animate_lines .line:nth-child(1)::after {
+  animation-delay: 2s
+}
+
+.animate_lines .line:nth-child(3) {
+  margin-left: 12%
+}
+
+.animate_lines .line:nth-child(3)::after {
+  animation-delay: 1.8s
+}
+
+.animate_lines .line:nth-child(4) {
+  margin-left: 80%
+}
+
+.animate_lines .line:nth-child(4)::after {
+  animation-delay: 3.5s
+}
+
+.animate_lines .line:nth-child(5) {
+  margin-left: 85%
+}
+
+.animate_lines .line:nth-child(5)::after {
+  animation-delay: 3s
+}
+
+.animate_lines .line:nth-child(6) {
+  margin-left: 100%
+}
+
+.animate_lines .line:nth-child(6)::after {
+  animation-delay: 1.7s
+}
+
+.animate_lines .line:after {
+  background: -webkit-gradient(linear, left top, left bottom, from($border-color), color-stop(75%, $primary-color), to($secondary-color));
+  background: linear-gradient(to bottom, $border-color 0%, $primary-color 75%, $secondary-color 100%);
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  -webkit-animation: run 7s 0s infinite;
+  animation: run 7s 0s infinite;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97)
+}
+
+@-webkit-keyframes run {
+  0% {
+      top: -50%
+  }
+  100% {
+      top: 110%
+  }
+}
+
+@keyframes run {
+  0% {
+      top: -10%
+  }
+  100% {
+      top: 100%
+  }
+}
+
+.pulse .pulse-ring {
+  border-color: $primary-color;
+  display: block;
+  position: absolute;
+  -webkit-animation: animation-pulse 3.5s ease-out;
+  animation: animation-pulse 3.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-style: solid;
+  top: 0;
+  left: 3px;
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  border-width: 5px
+}
+
+.pulse::after {
+  display: none
+}
+
+@-webkit-keyframes animation-pulse {
+  0% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+  60% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+  65% {
+      opacity: 1
+  }
+  100% {
+      -webkit-transform: scale(1.2, 1.2);
+      opacity: 0.0
+  }
+}
+
+@keyframes animation-pulse {
+  0% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+  60% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+  65% {
+      opacity: 1
+  }
+  100% {
+      -webkit-transform: scale(1.2, 1.2);
+      opacity: 0.0
+  }
+}

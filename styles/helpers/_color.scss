@@ -1,0 +1,170 @@
+.chart-color1 {
+	background-color: $chart-color1 !important
+}
+
+.chart-color2 {
+	background-color: $chart-color2 !important
+}
+
+.chart-color3 {
+	background-color: $chart-color3 !important
+}
+
+.chart-color4 {
+	background-color: $chart-color4 !important
+}
+
+.chart-color5 {
+	background-color: $chart-color5 !important
+}
+
+.fill-chart-color1 {
+	fill: $chart-color1 !important
+}
+
+.fill-chart-color2 {
+	fill: $chart-color2 !important
+}
+
+.fill-chart-color3 {
+	fill: $chart-color3 !important
+}
+
+.fill-chart-color4 {
+	fill: $chart-color4 !important
+}
+
+.fill-chart-color5 {
+	fill: $chart-color5 !important
+}
+
+.chart-text-color1 {
+	color: $chart-color1 !important
+}
+
+.chart-text-color2 {
+	color: $chart-color2 !important
+}
+
+.chart-text-color3 {
+	color: $chart-color3 !important
+}
+
+.chart-text-color4 {
+	color: $chart-color4 !important
+}
+
+.chart-text-color5 {
+	color: $chart-color5 !important
+}
+
+.color-fff {
+	color: $color-fff
+}
+
+.color-100 {
+	color: $color-100
+}
+
+.color-200 {
+	color: $color-200
+}
+
+.color-300 {
+	color: $color-300
+}
+
+.color-400 {
+	color: $color-400
+}
+
+.color-500 {
+	color: $color-500
+}
+
+.color-600 {
+	color: $color-600
+}
+
+.color-700 {
+	color: $color-700
+}
+
+.color-800 {
+	color: $color-800
+}
+
+.color-900 {
+	color: $color-900
+}
+
+.color-000 {
+	color: $color-000
+}
+
+.text-primary {
+	color: $primary-color !important
+}
+
+.text-secondary {
+	color: $secondary-color !important
+}
+
+.text-muted {
+	color: #9399a1 !important
+}
+
+.text-gradient {
+	background: linear-gradient(145deg, $primary-color, $dark-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent
+}
+
+.bg-primary {
+	background: $primary-color !important
+}
+
+.bg-secondary {
+	background: $secondary-color !important
+}
+
+.bg-primary-gradient {
+	background: $primary-gradient !important;
+	color: #fff
+}
+
+.bg-dark {
+	background: $color-900 !important
+}
+
+.bg-light {
+	background: $body-color !important
+}
+
+.bg-body {
+	background: $body-color !important
+}
+
+.bg-card {
+	background: $body-color !important
+}
+
+.bg-light-primary {
+	background: rgba(var(--color-pink-rgb), 0.2) !important
+}
+
+.bg-light-success {
+	background: rgba(77, 202, 136, 0.2) !important
+}
+
+.bg-light-danger {
+	background: rgba(252, 90, 105, 0.2) !important
+}
+
+.bg-light-warning {
+	background: rgba(255, 186, 51, 0.2) !important
+}
+
+.bg-light-info {
+	background: rgba(79, 184, 201, 0.2) !important
+}
