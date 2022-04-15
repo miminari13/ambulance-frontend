@@ -1,0 +1,108 @@
+.dropdown-menu.dropdown-animation {
+	padding: .9rem
+}
+
+.dropdown-menu.dropdown-animation a.dropdown-item {
+	transition: all 0.3s ease 0s;
+	min-width: 180px;
+	padding: 5px 0;
+	position: relative
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dropdown-menu.dropdown-animation a.dropdown-item {
+		transition: none
+	}
+}
+
+.dropdown-menu.dropdown-animation a.dropdown-item i {
+	transition: all 0.3s ease 0s;
+	margin-left: 0;
+	opacity: 0
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dropdown-menu.dropdown-animation a.dropdown-item i {
+		transition: none
+	}
+}
+
+.dropdown-menu.dropdown-animation a.dropdown-item:hover {
+	background-color: transparent
+}
+
+.dropdown-menu.dropdown-animation a.dropdown-item:hover i {
+	color: var(--primary-color);
+	opacity: 1;
+	margin-left: 8px
+}
+
+.dropdown.morphing:not(.scale-left) .dropdown-menu,
+.dropdown.morphing:not(.scale-right) .dropdown-menu {
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(15px) !important;
+	-moz-transform: translateY(15px) !important;
+	-ms-transform: translateY(15px) !important;
+	transform: translateY(15px) !important;
+	display: block;
+	margin: 0px;
+	top: auto !important
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dropdown.morphing:not(.scale-left) .dropdown-menu,
+	.dropdown.morphing:not(.scale-right) .dropdown-menu {
+		transition: none
+	}
+}
+
+.dropdown.morphing:not(.scale-left) .dropdown-menu.show,
+.dropdown.morphing:not(.scale-right) .dropdown-menu.show {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateY(0px) !important;
+	-moz-transform: translateY(0px) !important;
+	-ms-transform: translateY(0px) !important;
+	transform: translateY(0px) !important
+}
+
+.dropdown.morphing.scale-left .dropdown-menu,
+.dropdown.morphing.scale-right .dropdown-menu,
+.dropdown.morphing .dropdown-menu {
+	transform: scale(0, 0) !important;
+	-webkit-transform: scale(0, 0) !important;
+	-moz-transform: scale(0, 0) !important;
+	-ms-transform: scale(0, 0) !important;
+	display: block;
+	top: auto !important;
+	margin: 0px
+}
+
+.dropdown.morphing.scale-left .dropdown-menu.show,
+.dropdown.morphing.scale-right .dropdown-menu.show,
+.dropdown.morphing .dropdown-menu.show {
+	transform: scale(1, 1) !important;
+	-webkit-transform: scale(1, 1) !important;
+	-moz-transform: scale(1, 1) !important;
+	-ms-transform: scale(1, 1) !important
+}
+
+.dropdown.morphing.scale-left .dropdown-menu {
+	right: 0 !important;
+	left: auto !important;
+	-webkit-transform-origin: top right !important;
+	-moz-transform-origin: top right !important;
+	-ms-transform-origin: top right !important;
+	transform-origin: top right !important
+}
+
+.dropdown.morphing.scale-right .dropdown-menu {
+	right: auto !important;
+	left: 0 !important;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left
+}

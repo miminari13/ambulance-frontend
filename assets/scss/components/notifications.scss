@@ -1,0 +1,69 @@
+.notifications .pulse,
+.notifications .pulse:focus {
+	color: var(--primary-color) !important
+}
+
+.notifications .card .card-body.tab-content {
+	height: 330px
+}
+
+@media only screen and (max-width: 767px) {
+	.notifications .card .card-body.tab-content {
+		height: calc(100vh - 200px)
+	}
+}
+
+.notifications .card p {
+	font-weight: 500
+}
+
+.notifications .card p span {
+	font-size: 16px
+}
+
+.notifications .card span {
+	font-size: 14px
+}
+
+.notifications .card span .badge {
+	font-size: 11px
+}
+
+.notifications .card a {
+	color: var(--color-600)
+}
+
+.notifications .card small,
+.notifications .card .small {
+	color: var(--color-400);
+	font-weight: normal;
+	font-size: 12px
+}
+
+.notifications ul:hover li {
+	transition: ease 0.2s;
+	opacity: .8
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.notifications ul:hover li {
+		transition: none
+	}
+}
+
+.notifications ul:hover li:hover {
+	opacity: 1 !important
+}
+
+@media only screen and (max-width: 767px) {
+	.notifications .dropdown-menu {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: 55px
+	}
+	.notifications .dropdown-menu .card {
+		width: 100%
+	}
+}

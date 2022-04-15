@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
-import s from "./Signin.module.scss"
+
+
 
 const Signin: NextPage = () => {
   return (
     <div className="wrapper">
-      <div className={` ${s["page-body"]} ${s.auth} px-xl-4 px-sm-2 px-0 py-lg-2 py-1`}>
+      <div className="page-body auth px-xl-4 px-sm-2 px-0 py-lg-2 py-1">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
@@ -53,7 +54,7 @@ const Signin: NextPage = () => {
                       <div className="form-label">
                         <span className="d-flex justify-content-between align-items-center">
                           Password
-                          <a className="text-primary" href="auth-password-reset.html">Forgot Password?</a>
+                          <a className="text-primary" href="#">Forgot Password?</a>
                         </span>
                       </div>
                       <input type="password" className="form-control form-control-lg" placeholder="***************" />
@@ -68,10 +69,10 @@ const Signin: NextPage = () => {
                     </div>
                   </div>
                   <div className="col-12 text-center mt-4">
-                    <a className="btn btn-lg btn-block btn-dark lift text-uppercase" href="index.html">SIGN IN</a>
+                    <a className="btn btn-lg btn-block btn-dark lift text-uppercase" href="#">SIGN IN</a>
                   </div>
                   <div className="col-12 text-center mt-4">
-                    <span className="text-muted">Don't have an account yet? <a href="auth-signup.html">Sign up here</a></span>
+                    <span className="text-muted">Don't have an account yet? <a href="#">Sign up here</a></span>
                   </div>
                 </form>
               </div>

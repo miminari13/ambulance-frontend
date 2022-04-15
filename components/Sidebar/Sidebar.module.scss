@@ -1,90 +1,113 @@
-@import "../../styles/helpers";
+@import "../../assets/scss/helpers/_variables";
 
-.root {
-  display: flex;
-  flex-direction: column;
-  width: $sidebar-width-open;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  padding-left: 16px;
-  background-color: $sidebar-color;
-  overflow-y: auto;
-  transition: height 1s;
-  transform: translateX(-$sidebar-width-open);
+.menu-list {
+  border: 1px dashed $border-color;
+  list-style: none;
+  border-radius: .75rem;
+  padding: 0 1rem;
+  
 
-  @media print {
-    display: none;
+  >li {
+    border-bottom: 1px dashed $border-color;
   }
 
-  :global(.sidebar-hide) & {
-    display: none;
+  >li:last-child {
+    border-bottom: 0
   }
 
-  @media (max-width: breakpoint-max(sm)) {
-    position: static !important;
-    width: auto;
-    margin: 12px 24px 0;
-    border-radius: 8px;
-    padding: 0;
-    height: 0;
-    transform: none;
+  a[aria-expanded="true"].m-link {
+    color: $secondary-color;
+  }
 
-    .logo,
-    .sidebarAlerts,
-    .sidebarLabels,
-    .navTitle {
-      display: none;
+  a[aria-expanded="true"] .arrow:before {
+    content: "\f103"
+  }
+
+  .m-link,
+  .ms-link {
+    display: flex
+  }
+
+  .m-link:hover,
+  .m-link.active,
+  .ms-link:hover,
+  .ms-link.active {
+    color: $secondary-color;
+  }
+
+  .m-link:hover::before,
+  .m-link.active::before,
+  .ms-link:hover::before,
+  .ms-link.active::before {
+    display: block
+  }
+
+  .m-link {
+    color: $color-600;
+    align-items: center;
+    padding: 10px 0
+  }
+
+  .m-link>i {
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 10px
+  }
+
+  .ms-link {
+    color: $color-600;
+    position: relative;
+    padding: 4px 0;
+    font-size: 15px
+  }
+
+  .ms-link::before {
+    background-color: $secondary-color;
+    content: "";
+    display: none;
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    left: -28px;
+    top: 10px;
+    border-radius: 10px
+  }
+
+  .divider {
+    color: $color-600;
+  }
+
+  .divider small,
+  .divider .small {
+    font-size: 12px
+  }
+
+  .sub-menu {
+    transition: ease 0.2s;
+    list-style: none;
+    position: relative;
+    padding-left: 34px
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sub-menu {
+      transition: none
     }
   }
-}
 
-//.sidebarOpen {
-//  @media (min-width: breakpoint-min(md)) {
-//    //height: auto !important;
-//  }
-//}
+  .sub-menu li:last-child {
+    padding-bottom: 15px
+  }
 
-.sidebarOpen {
-  @media (max-width: breakpoint-max(sm)) {
-    height: 276px;
+  .sub-menu::before {
+    background-color: $secondary-color;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 10px;
+    top: 0
   }
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  margin: 16px 0 24px;
-  width: 100%;
-
-  .title {
-    margin-left: 12px;
-    font-size: 20px;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-  }
-}
-
-.nav {
-  padding-bottom: 10px;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  li > a > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.navTitle {
-  margin: 32px 0 8px;
-  font-size:$font-size-sm;
-  font-weight: $font-weight-normal;
-  color: $base-dark-gray;
-  text-transform: uppercase;
-}
-

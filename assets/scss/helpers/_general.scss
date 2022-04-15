@@ -48,3 +48,39 @@ a {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+
+.w30 {
+  width: 30px
+}
+
+.w60 {
+  width: 60px
+}
+
+.w90 {
+  width: 90px
+}
+
+.w120 {
+  width: 120px
+}
+
+.w180 {
+  width: 180px
+}
+
+.w240 {
+  width: 240px
+}
+
+.w320 {
+  width: 320px
+}
+
+.w380 {
+  width: 380px
+}
+
+.after-none::after {
+  display: none
+}

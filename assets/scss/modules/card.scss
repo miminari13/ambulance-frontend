@@ -38,6 +38,30 @@
   }
 }
 
+.card .card-header {
+  background-color: var(--card-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: .75rem .75rem 0 0
+}
+
+.card .card-header,
+.card .card-body,
+.card .card-footer {
+  padding: 1.5rem
+}
+
+@media only screen and (max-width: 767px) {
+  .card .card-header,
+  .card .card-body,
+  .card .card-footer {
+    padding: 1rem
+  }
+}
+
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;

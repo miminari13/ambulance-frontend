@@ -1,0 +1,32 @@
+.custom_scroll {
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none
+}
+
+.custom_scroll::-webkit-scrollbar {
+	background: var(--card-color);
+	visibility: visible;
+	width: 4px
+}
+
+.custom_scroll:hover::-webkit-scrollbar-thumb {
+	background: var(--secondary-color)
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+	visibility: visible;
+	background: transparent
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+	background: transparent;
+	visibility: visible
+}
+
+@media only screen and (max-width: 768px) {
+	.custom_scroll {
+		padding-bottom: 60px
+	}
+}
