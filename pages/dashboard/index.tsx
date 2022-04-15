@@ -1,20 +1,40 @@
 import type { NextPage } from 'next'
+import Sidebar from '../../components/Sidebar'
+import Header from '../../components/Header'
+import Toolbar from '../../components/Toolbar'
+import Workspace from '../../components/Workspace'
+/*import ContactsAsyncServerSR from '../../components/ContactsAsyncServerSR'*/
+import Footer from '../../components/Footer'
 
-import Sidebar from '../../components/Sidebar/Sidebar'
-import Header from '../../components/Header/Header'
-import Toolbar from '../../components/Toolbar/Toolbar'
-import Workspace from '../../components/Workspace/Workspace'
-import Footer from '../../components/Footer/Footer'
 
+export const getStaticProps = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  const data = await response.json();
 
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
 
-const Dashboard: NextPage = () => {
+  return {
+    props: { contacts: data },
+  }
+};
+
+const Dashboard: NextPage = ({ contacts }) => {
   return (
     <div className="main-layout">
       <Sidebar />
       <div className="wrapper">
         <Header />
         <Toolbar />
+        {/*<ul>
+          {contacts && contacts.map(({ id, name, email }) => (
+            <li key={id}><strong>{name}</strong> ({email})</li>
+          ))}
+        </ul>*/}
+        {/*<ContactsAsyncServerSR />*/}
         <Workspace />
         <Footer />
       </div>

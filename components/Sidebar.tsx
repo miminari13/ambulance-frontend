@@ -1,8 +1,16 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router' // for adding active class on link
+import Link from 'next/link'
 
-
+const navigationTeams = [
+  {id: 1, title: 'All Medical Teams', path: '/dashboard/medical-teams'},
+  {id: 2, title: 'Medical Teams Profiles', path: '/dashboard/medical-teams-profiles'},
+  {id: 3, title: 'Medical Teams Schedules', path: '/dashboard/medical-teams-schedules'},
+];
 
 const Sidebar: NextPage = () => {
+  const { pathname } = useRouter();
+
   return (
     <div className="sidebar p-2 py-md-3">
       <div className="container-fluid">
@@ -64,9 +72,13 @@ const Sidebar: NextPage = () => {
                   <span className="arrow fa fa-angle-right ms-auto text-end"></span>
               </a>
               <ul className="sub-menu collapse" id="menu-Doctor">
-                <li><a className="ms-link" href="/dashboard/medical-teams">All Medical Teams</a></li>
-                <li><a className="ms-link" href="#">Medical Teams Profiles</a></li>
-                <li><a className="ms-link" href="#">Medical Teams Schedules</a></li>
+                {navigationTeams.map( ({id, path, title}) => (
+                  <li key={id}>
+                    <Link href={path}>
+                      <a className={(pathname === path ? 'active' : '') + ' ms-link'}>{title}</a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className="collapsed">

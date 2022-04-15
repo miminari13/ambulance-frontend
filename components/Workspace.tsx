@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+/*import Heading from '../../components/Heading'*/
 
 
 
@@ -8,6 +9,7 @@ const Workspace: NextPage = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col">
+            {/*<Heading text="MIR.Amb app" tag="h3" />*/}
             Workspace
           </div>
         </div>

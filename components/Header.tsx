@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import Search from './Search'
-import Notifications from './Notifications'
-import Lang from './Lang'
-import User from './User'
+import Search from './header/Search'
+import Notifications from './header/Notifications'
+import Lang from './header/Lang'
+import User from './header/User'
 import Image from 'next/image'
 import Avatar from '../../assets/img/avatar.jpg'
 
