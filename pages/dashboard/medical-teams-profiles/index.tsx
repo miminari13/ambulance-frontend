@@ -3,14 +3,14 @@ import Dashboard from '../../Dashboard'
 
 
 
-const MedicalTeams: NextPage = () => {
+const MedicalTeamsProfiles: NextPage = () => {
   return (
     <Dashboard>
       <div className="workspace px-xl-4 px-sm-2 px-0 py-3">
         <div className="container-fluid">
           <div className="row">
             <div className="col">
-              Brigades - Doctors All
+              Brigades - Doctors profiles
             </div>
           </div>
         </div>
@@ -19,4 +19,4 @@ const MedicalTeams: NextPage = () => {
   )
 }
 
-export default MedicalTeams
+export default MedicalTeamsProfiles

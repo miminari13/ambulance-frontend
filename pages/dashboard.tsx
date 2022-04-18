@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import Sidebar from '../../components/Sidebar'
-import Header from '../../components/Header'
-import Toolbar from '../../components/Toolbar'
-import Workspace from '../../components/Workspace'
+import Sidebar from '../components/Sidebar'
+import Header from '../components/Header'
+import Toolbar from '../components/Toolbar'
 /*import ContactsAsyncServerSR from '../../components/ContactsAsyncServerSR'*/
-import Footer from '../../components/Footer'
+import Footer from '../components/Footer'
+
 
 
 export const getStaticProps = async () => {
@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
   }
 };
 
-const Dashboard: NextPage = ({ contacts }) => {
+const Dashboard: NextPage = ({ /*contacts,*/ children }) => {
   return (
     <div className="main-layout">
       <Sidebar />
@@ -35,7 +35,7 @@ const Dashboard: NextPage = ({ contacts }) => {
           ))}
         </ul>*/}
         {/*<ContactsAsyncServerSR />*/}
-        <Workspace />
+        { children }
         <Footer />
       </div>
     </div>
